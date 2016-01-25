@@ -69,5 +69,7 @@
 #define __RennAppKey_                   @"91f445d92b4b4b1598a2bc57f1d57f8d"
 #define __RennSecretKey_                @"545a8629054a4c2bae7509be2c434d0f"
 
+#define REQUEST_METHOD_GET          @"GET"
+#define REQUEST_METHOD_POST         @"POST"
 
 #endif

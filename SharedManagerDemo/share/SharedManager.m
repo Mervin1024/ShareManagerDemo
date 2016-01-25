@@ -16,7 +16,7 @@ static SharedManager *manager = Nil;
 + (instancetype)manager{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [self init];
+        manager = [[SharedManager alloc] init];
     });
     return manager;
 }

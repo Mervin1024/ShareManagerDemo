@@ -52,8 +52,12 @@ typedef NS_ENUM(NSInteger, SharedPlatform) {
     //temp
     NSString *tempToken;
     NSString *tempAccountId;
+    
+    BOOL isBindYiXinRequest;
+    BOOL isSessionGetAccountBack;
 }
 @property (nonatomic, weak) id<SharedManagerDelegate> delegate;
+
 
 + (instancetype)manager;
 

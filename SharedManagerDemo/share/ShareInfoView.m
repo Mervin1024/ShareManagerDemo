@@ -8,9 +8,10 @@
 
 #import "ShareInfoView.h"
 
-@interface ShareInfoView (){
+@interface ShareInfoView () <SharedManagerDelegate> {
     UIViewController *superViewController;
     UIView *containerView;
+    SharedManager *sharedManager;
 }
 
 @end
@@ -23,6 +24,8 @@ static CGFloat containerViewHeight = 200;
         [self addGestureRecognizer:tap];
         self.backgroundColor = [UIColor clearColor];
         [self addViews];
+        sharedManager = [SharedManager manager];
+        sharedManager.delegate = self;
     }
     return self;
 }
@@ -30,12 +33,12 @@ static CGFloat containerViewHeight = 200;
 - (void)addViews{
     containerView = [[UIView alloc] initWithFrame:CGRectMake(0, -containerViewHeight, SCREEN_WIDTH, containerViewHeight)];
     containerView.backgroundColor = [UIColor lightGrayColor];
-    UIButton *buttonQQ = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 60, 40)];
+    UIButton *buttonQQ = [[UIButton alloc] initWithFrame:CGRectMake(20, 60, 60, 40)];
     [buttonQQ addTarget:self action:@selector(shareToQQ:) forControlEvents:UIControlEventTouchUpInside];
     [buttonQQ setTitle:@"扣扣" forState:UIControlStateNormal];
     
-    UIButton *buttonWB = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-20-60, 20, 60, 40)];
-    [buttonWB addTarget:self action:@selector(shareToWeibo:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *buttonWB = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-20-60, 60, 60, 40)];
+    [buttonWB addTarget:self action:@selector(shareToSinaWeibo:) forControlEvents:UIControlEventTouchUpInside];
     [buttonWB setTitle:@"围脖" forState:UIControlStateNormal];
     [containerView addSubview:buttonQQ];
     [containerView addSubview:buttonWB];
@@ -43,11 +46,18 @@ static CGFloat containerViewHeight = 200;
 }
 
 - (void)shareToQQ:(id)sender{
-    
+    [sharedManager postShareInformation:[self sharedObjFromDataSource] toPlatform:SharedPlatformForQQ];
 }
 
-- (void)shareToWeibo:(id)sender{
-    
+- (void)shareToSinaWeibo:(id)sender{
+    [sharedManager postShareInformation:[self sharedObjFromDataSource] toPlatform:SharedPlatformForSinaMicroblog];
+}
+
+- (SharedObject *)sharedObjFromDataSource{
+    if (self.dataSource && [self.dataSource respondsToSelector:@selector(sharedObject)]) {
+        return [self.dataSource sharedObject];
+    }
+    return nil;
 }
 
 - (void)showShareInfoViewInSuperView:(UIView *)superView andViewController:(UIViewController *)viewController{
@@ -72,6 +82,15 @@ static CGFloat containerViewHeight = 200;
             [self removeFromSuperview];
         }
     }];
+}
+
+#pragma mark - SharedManager Delegate
+- (void)sinaWBShareSucceed{
+    NSLog(@"分享成功");
+}
+
+- (void)sinaWBShareFailed{
+    NSLog(@"分享失败");
 }
 
 @end

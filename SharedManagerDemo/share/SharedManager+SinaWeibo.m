@@ -72,7 +72,7 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     
     // HTTP请求方式
-    NSString *httpMethod = @"POST";
+    NSString *httpMethod = REQUEST_METHOD_POST;
     
     // 微博请求的接口：
     // statuses/update              发布一条微博信息

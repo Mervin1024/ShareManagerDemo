@@ -8,7 +8,7 @@
 
 #import "SharedManager.h"
 
-@interface SharedManager (SinaWeibo) <SinaWeiboDelegate, SinaWeiboAuthorizeViewDelegate, SinaWeiboRequestDelegate>
+@interface SharedManager (SinaWeibo)<SinaWeiboDelegate, SinaWeiboAuthorizeViewDelegate, SinaWeiboRequestDelegate>
 
 - (void)sharedToSinaWeiboWithObject:(SharedObject *)sharedObj;
 

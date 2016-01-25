@@ -29,15 +29,13 @@
 }
 
 - (IBAction)commitAction:(id)sender {
-//    NSLog(@"%@",self.shareTextView.text);
-//    SharedTextObject *obj = [SharedTextObject shareTextObjectWithContent:self.shareTextView.text];
-//    [[SharedManager manager] postShareInformation:obj toPlatform:SharedPlatformForSinaMicroblog];
+    
     ShareInfoView *shareInfoView = [[ShareInfoView alloc] init];
     shareInfoView.dataSource = self;
     [shareInfoView showShareInfoViewInSuperView:self.view andViewController:self];
 }
 
 - (SharedObject *)sharedObject{
-    return nil;
+    return [SharedTextObject shareTextObjectWithContent:self.shareTextView.text];
 }
 @end

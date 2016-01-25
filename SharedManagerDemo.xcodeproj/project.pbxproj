@@ -34,6 +34,8 @@
 		EE4B9E411C520AC7001D1B6F /* SharedManager+SinaWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4B9E401C520AC7001D1B6F /* SharedManager+SinaWeibo.m */; };
 		EE4B9E491C520FDF001D1B6F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4B9E481C520FDF001D1B6F /* libsqlite3.tbd */; };
 		EE4B9E4D1C52333D001D1B6F /* ShareInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4B9E4C1C52333D001D1B6F /* ShareInfoView.m */; };
+		EE6417431C560A850011AA38 /* SharedManager+YiXin.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6417421C560A850011AA38 /* SharedManager+YiXin.m */; };
+		EE6417461C560BD80011AA38 /* SharedManager+WeChat.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6417451C560BD80011AA38 /* SharedManager+WeChat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,10 @@
 		EE4B9E481C520FDF001D1B6F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		EE4B9E4B1C52333D001D1B6F /* ShareInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareInfoView.h; sourceTree = "<group>"; };
 		EE4B9E4C1C52333D001D1B6F /* ShareInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareInfoView.m; sourceTree = "<group>"; };
+		EE6417411C560A850011AA38 /* SharedManager+YiXin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SharedManager+YiXin.h"; sourceTree = "<group>"; };
+		EE6417421C560A850011AA38 /* SharedManager+YiXin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SharedManager+YiXin.m"; sourceTree = "<group>"; };
+		EE6417441C560BD80011AA38 /* SharedManager+WeChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SharedManager+WeChat.h"; sourceTree = "<group>"; };
+		EE6417451C560BD80011AA38 /* SharedManager+WeChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SharedManager+WeChat.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,13 +221,17 @@
 		EE4B9DFD1C51F020001D1B6F /* share */ = {
 			isa = PBXGroup;
 			children = (
+				EE4B9DFE1C51F020001D1B6F /* ENShareSDKManager.h */,
 				EE4B9E011C51F020001D1B6F /* SharedManager.h */,
 				EE4B9E021C51F020001D1B6F /* SharedManager.m */,
-				EE4B9DFE1C51F020001D1B6F /* ENShareSDKManager.h */,
 				EE4B9DFF1C51F020001D1B6F /* SharedManager+QQ.h */,
 				EE4B9E001C51F020001D1B6F /* SharedManager+QQ.m */,
 				EE4B9E3F1C520AC7001D1B6F /* SharedManager+SinaWeibo.h */,
 				EE4B9E401C520AC7001D1B6F /* SharedManager+SinaWeibo.m */,
+				EE6417441C560BD80011AA38 /* SharedManager+WeChat.h */,
+				EE6417451C560BD80011AA38 /* SharedManager+WeChat.m */,
+				EE6417411C560A850011AA38 /* SharedManager+YiXin.h */,
+				EE6417421C560A850011AA38 /* SharedManager+YiXin.m */,
 				EE4B9E4B1C52333D001D1B6F /* ShareInfoView.h */,
 				EE4B9E4C1C52333D001D1B6F /* ShareInfoView.m */,
 			);
@@ -437,11 +447,13 @@
 				EE4B9DD21C51EFFC001D1B6F /* ViewController.m in Sources */,
 				EE4B9E1E1C51F070001D1B6F /* SinaWeiboAuthorizeView.m in Sources */,
 				EE4B9DCF1C51EFFC001D1B6F /* AppDelegate.m in Sources */,
+				EE6417461C560BD80011AA38 /* SharedManager+WeChat.m in Sources */,
 				EE4B9E371C51FB0C001D1B6F /* UserAlertView.m in Sources */,
 				EE4B9DCC1C51EFFC001D1B6F /* main.m in Sources */,
 				EE4B9E041C51F020001D1B6F /* SharedManager.m in Sources */,
 				EE4B9E381C51FB0C001D1B6F /* UserAlertViewManager.m in Sources */,
 				EE4B9E411C520AC7001D1B6F /* SharedManager+SinaWeibo.m in Sources */,
+				EE6417431C560A850011AA38 /* SharedManager+YiXin.m in Sources */,
 				EE4B9E1F1C51F070001D1B6F /* SinaWeiboRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
