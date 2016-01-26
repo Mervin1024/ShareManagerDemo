@@ -11,5 +11,5 @@
 @interface SharedManager (WeChat) <WXApiDelegate>
 
 - (void)sharedToWeChatWithObject:(SharedObject *)sharedObj;
-
+- (void)sharedToWechatCirclesWithObject:(SharedObject *)sharedObj;
 @end
