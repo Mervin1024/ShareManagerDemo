@@ -10,4 +10,6 @@
 
 @interface SharedManager (YiXin) <YXApiDelegate>
 
+- (void)sharedToYiXinWithObject:(SharedObject *)sharedObj;
+- (void)sharedToYiXinCirclesWithObject:(SharedObject *)sharedObj;
 @end
