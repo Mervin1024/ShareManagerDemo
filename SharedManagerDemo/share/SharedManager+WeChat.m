@@ -19,7 +19,7 @@
     [self sharedToWeChatWithObject:sharedObj scene:WXSceneTimeline];
 }
 
-- (void)sharedToWeChatWithObject:(SharedObject *)sharedObj  scene:(enum WXScene)scene{
+- (void)sharedToWeChatWithObject:(SharedObject *)sharedObj scene:(enum WXScene)scene{
     switch (sharedObj.purpose) {
         case ShareInfoPurposeForText:{
             SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
