@@ -19,10 +19,10 @@
 }
 #pragma mark - share
 - (void)sharedToYiXinWithObject:(SharedObject *)sharedObj{
-    
+    [self sharedToYiXinWithObject:sharedObj scene:kYXSceneSession];
 }
 - (void)sharedToYiXinCirclesWithObject:(SharedObject *)sharedObj{
-    
+    [self sharedToYiXinWithObject:sharedObj scene:kYXSceneTimeline];
 }
 
 - (void)sharedToYiXinWithObject:(SharedObject *)sharedObj scene:(enum YXScene)scene{
