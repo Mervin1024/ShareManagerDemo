@@ -11,11 +11,11 @@
 @implementation SharedManager (YiXin)
 #pragma mark - YiXin API Delegate
 - (void)onReceiveRequest:(YXBaseReq *)req{
-    
+    //
 }
 
 - (void)onReceiveResponse:(YXBaseResp *)resp{
-    
+    //
 }
 #pragma mark - share
 - (void)sharedToYiXinWithObject:(SharedObject *)sharedObj{
